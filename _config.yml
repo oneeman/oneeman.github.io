@@ -1,0 +1,11 @@
+# Site settings
+title: Or Neeman
+email: oneeman@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  Or Neeman's homepage.  Pretty boring, if you ask me.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://emptysecods.com" # the base hostname & protocol for your site
+github_username:  oneeman
+
+# Build settings
+markdown: kramdown
