@@ -33,7 +33,7 @@ assistant for several courses in the mathematics and philosophy departments.
 
 ## Education
 
-* **Ph.D. candidate in Philosophy**, University of Pittsburgh (ABD, withdrew April 2011).
+* **Ph.D. candidate in Philosophy**, University of Pittsburgh, ABD (withdrew April 2011).
 
 * **M.A. in Philosophy**, University of Pittsburgh, December 2009.
 
