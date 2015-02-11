@@ -1,6 +1,7 @@
 ---
 layout: page
 title: CV
+excerpt: My CV, or resume, if you will
 priority: 1.2
 permalink: /cv/
 ---

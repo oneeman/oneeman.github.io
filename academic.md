@@ -2,6 +2,7 @@
 layout: page
 title: Academic
 priority: 2.1
+excerpt: Scraps from my time in academia
 permalink: /academic/
 ---
 

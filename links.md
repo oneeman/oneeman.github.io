@@ -2,6 +2,7 @@
 layout: page
 title: Links
 priority: 9.2
+excerpt: Links to a few pages worth reading
 permalink: /links/
 ---
 

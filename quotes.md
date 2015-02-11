@@ -2,6 +2,7 @@
 layout: page
 title: Quotes
 priority: 9.1
+excerpt: A bunch of quotes I've collected over the years
 permalink: /quotes/
 ---
 
