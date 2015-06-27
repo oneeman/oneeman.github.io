@@ -14,7 +14,7 @@ languages, and Haskell and Scala in particular.
 When it comes to open-source, I like to contribute to established projects.  I got started contributing to Ember's
 [HTMLBars](http://github.com/tildeio/htmlbars).  After that, I worked on the
 [Elixir compiler and standard libraries](https://github.com/elixir-lang/elixir).  Going forward, my plan is to continue
-to learn Haskell and Scala and--once I've gotten far enough along with them--to start contributed to projects in one or
+to learn Haskell and Scala and--once I've gotten far enough along with them--to start contributing to projects in one or
 both of those.
   
 ## Experience
