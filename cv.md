@@ -8,18 +8,19 @@ permalink: /cv/
 
 I'm a software developer based in Costa Rica, from where I've been doing remote work.  My professional experience has
 been primarily using Python and Javascript, and a bit of Ruby on Rails.  Lately, I've jumped on the functional 
-programming bandwagon.  I'm currently focusing on Elixir and Haskell, but I've also learned some Clojure and Erlang.
-
-Starting in April 2015, I'm taking some time off from paid work to dive deeper into functional programming and to
-dedicate more time to working on open-source projects.  But I'll be back on the market shortly, so if you're looking to
-hire a functional programmer and can accommodate remote work, feel free to email me.
+programming bandwagon.  After learning Clojure, Elixir, and Erlang, I've settled on statically-typed functional
+languages, and Haskell and Scala in particular.
 
 When it comes to open-source, I like to contribute to established projects.  I got started contributing to Ember's
-[HTMLBars](http://github.com/tildeio/htmlbars).  Lately I've been working on the
+[HTMLBars](http://github.com/tildeio/htmlbars).  After that, I worked on the
 [Elixir compiler and standard libraries](https://github.com/elixir-lang/elixir).  Going forward, my plan is to continue
-to work on Elixir and to also start work on some Haskell projects once I've learned the language well enough.
+to learn Haskell and Scala and--once I've gotten far enough along with them--to start contributed to projects in one or
+both of those.
   
 ## Experience
+
+* **Software Engineer (contractor)** at [ThriveHive](http://thrivehive.com), June 2015-present.  Front-end development
+on the company's customer-facing single-page application.
 
 * **Python Engineer** at [Demand Media](http://www.demandmedia.com) (contracting through 
 [BairesDev](http://bairesdev.com)), June 2014-March 2015.  Full-stack development on the datacenter automation
