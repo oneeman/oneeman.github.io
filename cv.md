@@ -19,7 +19,7 @@ both of those.
   
 ## Experience
 
-* **Software Engineer (contractor)** at [ThriveHive](http://thrivehive.com), June 2015-present.  Front-end development
+* **Software Engineer (contracting)** at [ThriveHive](http://thrivehive.com), June 2015-present.  Front-end development
 on the company's customer-facing single-page application.
 
 * **Python Engineer** at [Demand Media](http://www.demandmedia.com) (contracting through 
