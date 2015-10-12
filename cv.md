@@ -6,16 +6,20 @@ priority: 1.2
 permalink: /cv/
 ---
 
-I'm a software developer based in Costa Rica, from where I've been doing remote work.  My professional experience has
-been primarily using Python and Javascript, and a bit of Ruby on Rails.  Lately, I've jumped on the functional 
-programming bandwagon.  After learning Clojure, Elixir, and Erlang, I've settled on statically-typed functional
-languages, and Haskell and Scala in particular.
+I'm a software developer based in Costa Rica, from where I've been doing remote work.  My professional experience is as
+a full-stack web developer, primarily with Python, Javascript, and Ruby on Rails.  I care deeply about writing
+clean and maintainable code, supported by comprehensive automated tests.
+   
+I was recently admitted to Georgia Tech's 
+[Online Master of Science in Computer Science (OMSCS)](http://www.omscs.gatech.edu/) program, and will be starting
+classes there in Spring 2016.    
 
-When it comes to open-source, I like to contribute to established projects.  I got started contributing to Ember's
-[HTMLBars](http://github.com/tildeio/htmlbars).  After that, I worked on the
-[Elixir compiler and standard libraries](https://github.com/elixir-lang/elixir).  Going forward, my plan is to continue
-to learn Haskell and Scala and--once I've gotten far enough along with them--to start contributing to projects in one or
-both of those.
+I am also a fan of functional programming, having learned Clojure, Elixir, Erlang, Scala, and Haskell.  I look forward
+to using some of them more in the future.
+
+When it comes to open-source, I like to contribute to established projects, having made contributions to projects such
+as Ember's [HTMLBars](http://github.com/tildeio/htmlbars) and the
+[Elixir compiler and standard libraries](https://github.com/elixir-lang/elixir).
   
 ## Experience
 
@@ -42,6 +46,8 @@ three classes of high school mathematics.
 assistant for several courses in the mathematics and philosophy departments. 
 
 ## Education
+
+* **M.S. in Computer Science (ongoing)**, Georgia Institute of Technology, Jan 2016-present
 
 * **Ph.D. candidate in Philosophy**, University of Pittsburgh, ABD (withdrew April 2011).
 
