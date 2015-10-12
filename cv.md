@@ -8,14 +8,12 @@ permalink: /cv/
 
 I'm a software developer based in Costa Rica, from where I've been doing remote work.  My professional experience is as
 a full-stack web developer, primarily with Python, Javascript, and Ruby on Rails.  I care deeply about writing
-clean and maintainable code, supported by comprehensive automated tests.
+clean and maintainable code, supported by comprehensive automated tests.  I am also a fan of functional programming,
+having learned Clojure, Elixir, Erlang, Scala, and Haskell.
    
 I was recently admitted to Georgia Tech's 
 [Online Master of Science in Computer Science (OMSCS)](http://www.omscs.gatech.edu/) program, and will be starting
 classes there in Spring 2016.    
-
-I am also a fan of functional programming, having learned Clojure, Elixir, Erlang, Scala, and Haskell.  I look forward
-to using some of them more in the future.
 
 When it comes to open-source, I like to contribute to established projects, having made contributions to projects such
 as Ember's [HTMLBars](http://github.com/tildeio/htmlbars) and the
