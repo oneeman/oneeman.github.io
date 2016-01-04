@@ -87,7 +87,7 @@ I have discovered that all the unhappiness of men arises from one single fact, t
 own chamber.  
 --- Blaise Pascal, Pensees 139
 
-Vanity.--How wonderful it is that a thing so evident as the vanity of the world is so little known, that it is a strange and surprising thing to say that it is foolish to seek greatness?
+Vanity.--How wonderful it is that a thing so evident as the vanity of the world is so little known, that it is a strange and surprising thing to say that it is foolish to seek greatness?  
 --- Blaise Pascal, Pensees 161
 
 Indeed, it may be laid down as a rule of foreign relations that the lower the probability that advice will be taken,
