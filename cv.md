@@ -11,9 +11,9 @@ a full-stack web developer, primarily with Python, Javascript, and Ruby on Rails
 clean and maintainable code, supported by comprehensive automated tests.  I am also a fan of functional programming,
 having learned Clojure, Elixir, Erlang, Scala, and Haskell.
    
-I was recently admitted to Georgia Tech's 
-[Online Master of Science in Computer Science (OMSCS)](http://www.omscs.gatech.edu/) program, and will be starting
-classes there in Spring 2016.    
+I am currently enrolled in Georgia Tech's
+[Online Master of Science in Computer Science (OMSCS)](http://www.omscs.gatech.edu/)
+program, focusing on machine learning and artificial intelligence.
 
 When it comes to open-source, I like to contribute to established projects, having made contributions to projects such
 as Ember's [HTMLBars](http://github.com/tildeio/htmlbars) and the
@@ -21,7 +21,7 @@ as Ember's [HTMLBars](http://github.com/tildeio/htmlbars) and the
   
 ## Experience
 
-* **Software Developer (contracting)** at [ThriveHive](http://thrivehive.com), June 2015-present.  Front-end development
+* **Software Developer** at [ThriveHive](http://thrivehive.com), June 2015-June 2016.  Front-end development
 on the company's customer-facing single-page application.
 
 * **Python Engineer** at [Demand Media](http://www.demandmedia.com) (contracting through 
