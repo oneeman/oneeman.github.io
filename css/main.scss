@@ -13,18 +13,27 @@ $base-line-height: 1.5;
 
 $spacing-unit:     30px;
 
-$text-color: #d5e6ff;
-$background-color: #215569;
-$brand-color:      #bb6e1a;
-$link-color:      #bf9f1d;
+// Scheme colors
+$my-orange: #cd8135;
+$my-blue: #1f4e7d;
+$my-purple: #7d1f7d;
+$my-green: #4e7d1f;
+$my-brown: #7d4e1f;
+$my-red: #7d1f1f;
+
+$text-color: #000000;
+$background-color: #fdfdfd;
+$brand-color:      $my-brown;
+$site-title-color: #a66829;
+$link-color:      $my-orange;
 
 $grey-color: #cfcfcf;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
-$h1-color: #ffffc0;
-$h2-color: #c0b4ff;
-$h3-color: #c1ffba;
+$h1-color: $my-purple;
+$h2-color: $my-red;
+$h3-color: $my-blue;
 
 // Width of the content area
 $content-width:    1200px;
