@@ -91,7 +91,7 @@ Vanity.--How wonderful it is that a thing so evident as the vanity of the world 
 --- Blaise Pascal, Pensees 161
 
 Indeed, it may be laid down as a rule of foreign relations that the lower the probability that advice will be taken,
-the more firmly it will be proffered.
+the more firmly it will be proffered.  
 --- J. K. Galbraith, The New Industrial State
 
 An illustrious politician has said that "you can not fool all the people all the time," but in a case where the people
