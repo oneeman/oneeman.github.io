@@ -2,7 +2,6 @@ var webpack = require("webpack");
 
 const config = {
   entry: {
-    "foo/generic": './src/foo/generic.js',
     misanthropy: './src/misanthropy.js',
     vendor: ["react", "lodash"]
   },
