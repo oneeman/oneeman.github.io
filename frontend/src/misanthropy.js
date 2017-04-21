@@ -1,3 +1,3 @@
-var vendor = require("lodash");
+import _ from 'lodash';
 
 console.log("LOADED MISANTHROPY!");

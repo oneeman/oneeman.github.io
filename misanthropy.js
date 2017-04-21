@@ -1,52 +1,17 @@
-$(function () {
-  var cartoons = parseCartoonsData();
-  var current,
-      imageElem = $('#mis-img'),
-      titleElem = $('#mis-title');
-  initializeLinks();
-  current = parseHash();
-  setCartoon(current);
+webpackJsonp([0],{
 
-  function parseCartoonsData() {
-    var rows, result, parts;
-    rows = misanthropyData.split('\n');
-    result = [];
-    rows.forEach(function (row) {
-      if (row.indexOf(',') !== -1) {
-        var comma = row.indexOf(',');
-        result.push([parseInt(row.substring(0, comma).trim()), row.substring(comma+1).trim()]);
-      }
-    });
-    return result;
-  }
+/***/ 21:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-  function parseHash() {
-    var hash = parseInt(location.hash.substring(1));
-    for (var i = 0; i < cartoons.length; i++) {
-      if (cartoons[i][0] === hash) {
-        return hash;
-      }
-    }
-    location.hash = 1;
-    return 1;
-  }
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_lodash__);
 
-  function initializeLinks() {
-    $('#mis-first').on('click', function () { setCartoon(1); return false;});
-    $('#mis-prev').on('click', function () { setCartoon(current - 1); return false;});
-    $('#mis-next').on('click', function () { setCartoon(current + 1); return false;});
-    $('#mis-last').on('click', function () { setCartoon(cartoons.length); return false;});
-  }
 
-  function setCartoon(number) {
-    if (number === 0) { number = 1; }
-    if (number === cartoons.length + 1) { number = cartoons.length; }
-    current = number;
-    location.hash = current;
-    var image = '/img/misanthropy/mis_' + current + '.jpg',
-        title = cartoons[current-1][1];
-    imageElem.attr('src', image).attr('alt', 'Cartoon: ' + title);
-    titleElem.text(title);
-  }
-});
+console.log("LOADED MISANTHROPY!");
 
+/***/ })
+
+},[21]);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvbWlzYW50aHJvcHkuanMiXSwibmFtZXMiOlsiY29uc29sZSIsImxvZyJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7O0FBQUE7O0FBRUFBLFFBQVFDLEdBQVIsQ0FBWSxxQkFBWixFIiwiZmlsZSI6Im1pc2FudGhyb3B5LmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IF8gZnJvbSAnbG9kYXNoJztcblxuY29uc29sZS5sb2coXCJMT0FERUQgTUlTQU5USFJPUFkhXCIpO1xuXG5cblxuLy8gV0VCUEFDSyBGT09URVIgLy9cbi8vIC4vc3JjL21pc2FudGhyb3B5LmpzIl0sInNvdXJjZVJvb3QiOiIifQ==

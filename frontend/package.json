@@ -4,7 +4,7 @@
   "description": "Front-end code for Or Neeman's homepage",
   "main": "index.js",
   "scripts": {
-    "start": "webpack --config webpack.config.js"
+    "start": "webpack --config webpack.config.js --watch"
   },
   "author": "Or Neeman",
   "license": "GPL-3.0",
@@ -13,6 +13,8 @@
     "react": "^15.5.4"
   },
   "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
     "webpack": "^2.4.1"
   }
 }
