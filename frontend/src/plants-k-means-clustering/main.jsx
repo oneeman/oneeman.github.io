@@ -1,9 +1,9 @@
 import _ from 'lodash';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import getDataset from './dataset';
+import loadData from './dataset';
 
-getDataset().then(function(dataset) {
+loadData().then(function(data) {
   console.log("DONE")
 });
 
