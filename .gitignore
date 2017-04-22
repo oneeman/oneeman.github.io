@@ -4,5 +4,6 @@
 .ruby-gemset
 .ruby-version
 **/.tern-port
+**/*.js.map
 
 frontend/node_modules

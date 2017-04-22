@@ -15,6 +15,7 @@ function isExternal(module) {
 const config = {
   entry: {
     misanthropy: './src/misanthropy.jsx',
+    "assets/plants-k-means-clustering/plants-k-means-clustering": './src/plants-k-means-clustering/main.jsx',
   },
 
   output: {
