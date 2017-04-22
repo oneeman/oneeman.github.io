@@ -4,9 +4,10 @@ import _ from 'lodash';
 const data = {};
 
 export default function loadData() {
-  return Promise.all([fetchAbbreviations(), fetchDataset()]).then(([nothing, datasetLines]) => {
+  return Promise.all([fetchDataset(), fetchMap(), fetchAbbreviations()]).then(([datasetLines, mapGeoJSON]) => {
     data.original = encodeDataset(datasetLines, data.abbrOriginal);
     data.fixed = encodeDataset(datasetLines, data.abbrFixed);
+    data.mapGeoJSON = mapGeoJSON;
     return data;
   });
 }
@@ -32,6 +33,11 @@ function fetchDataset() {
   return fetch('/assets/plants-k-means-clustering/plants.data')
     .then(response => response.text())
     .then(parseDataset);
+}
+
+function fetchMap() {
+  return fetch('/assets/plants-k-means-clustering/states.geojson')
+    .then(response => response.json());
 }
 
 function parseDataset(text) {

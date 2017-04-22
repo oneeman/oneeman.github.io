@@ -12,7 +12,9 @@ module.exports = {
     "comma-dangle": "off",
     "jsx-a11y/href-no-hash": "off",
     "radix": "off",
-    "no-use-before-define": "off"
+    "no-use-before-define": "off",
+    "arrow-body-style": "off",
+    "max-len": ["warn", {code: 120}]
   },
   "globals": {
     "document": true,
