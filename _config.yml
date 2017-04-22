@@ -1,6 +1,7 @@
 # Site settings
 title: Or Neeman
 email: oneeman@gmail.com
+future: true
 description: > # this means to ignore newlines until "baseurl:"
   Or Neeman's homepage.  Now with 500% more CSS!
 baseurl: "" # the subpath of your site, e.g. /blog/

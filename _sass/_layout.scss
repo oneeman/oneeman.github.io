@@ -174,13 +174,13 @@ body {
     list-style: none;
 
     > li {
-        margin-bottom: $spacing-unit;
+        margin-bottom: 15px;
     }
 }
 
 .post-meta {
     font-size: $small-font-size;
-    color: $grey-color;
+    color: $grey-color-dark;
 }
 
 .post-link {
@@ -198,13 +198,8 @@ body {
 }
 
 .post-title {
-    font-size: 42px;
     letter-spacing: -1px;
     line-height: 1;
-
-    @include media-query($on-laptop) {
-        font-size: 36px;
-    }
 }
 
 .post-content {
