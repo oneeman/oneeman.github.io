@@ -11,10 +11,12 @@ module.exports = {
     "object-curly-spacing": "off",
     "comma-dangle": "off",
     "jsx-a11y/href-no-hash": "off",
-    "radix": "off"
+    "radix": "off",
+    "no-use-before-define": "off"
   },
   "globals": {
     "document": true,
-    "window": true
+    "window": true,
+    "fetch": true
   }
 };

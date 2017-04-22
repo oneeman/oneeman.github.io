@@ -10,8 +10,10 @@
   "license": "GPL-3.0",
   "dependencies": {
     "lodash": "^4.17.4",
+    "msgpack-lite": "^0.1.26",
     "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
+    "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",
