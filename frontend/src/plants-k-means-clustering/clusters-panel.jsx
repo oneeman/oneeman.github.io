@@ -52,8 +52,8 @@ export class PanelWithControls extends React.Component {
   render() {
     return (
       <div>
-        <button onClick={() => { this.step(); }}>Step</button>
-        <button onClick={() => { this.startStop(); }}>{ this.state.running ? "Stop" : "Start" }</button>
+        <button className="primary" onClick={() => { this.step(); }}>Step</button>
+        <button className="primary" onClick={() => { this.startStop(); }}>{ this.state.running ? "Stop" : "Start" }</button>
         <ClustersPanel data={this.data} centers={this.state.centers} />
       </div>
     );

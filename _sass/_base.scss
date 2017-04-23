@@ -218,3 +218,55 @@ body .wrapper {
         /* } */
     }
 }
+
+/**
+ * Buttons
+ */
+
+@mixin setBgColorAndHover($baseColor) {
+  background-color: $baseColor;
+  background-image: -webkit-linear-gradient(top, $baseColor, darken($baseColor, 5%));
+  background-image: -moz-linear-gradient(top, $baseColor, darken($baseColor, 5%));
+  background-image: -ms-linear-gradient(top, $baseColor, darken($baseColor, 5%));
+  background-image: -o-linear-gradient(top, $baseColor, darken($baseColor, 5%));
+  background-image: linear-gradient(top, $baseColor, darken($baseColor, 5%));
+  &:hover {
+    background-color: darken($baseColor, 5%);
+    background-image: -webkit-linear-gradient(top, lighten($baseColor, 10%), lighten($baseColor, 5%));
+    background-image: -moz-linear-gradient(top, lighten($baseColor, 10%), lighten($baseColor, 5%));
+    background-image: -ms-linear-gradient(top, lighten($baseColor, 10%), lighten($baseColor, 5%));
+    background-image: -o-linear-gradient(top, lighten($baseColor, 10%), lighten($baseColor, 5%));
+    background-image: linear-gradient(top, lighten($baseColor, 10%), lighten($baseColor, 5%));
+  }
+}
+
+button, .button {
+  &.default {
+    @include setBgColorAndHover(gray);
+  }
+  &.primary {
+    @include setBgColorAndHover($my-blue);
+  }
+  &.success {
+    @include setBgColorAndHover($my-green);
+  }
+  &.warn {
+    @include setBgColorAndHover($my-orange);
+  }
+  &.alert {
+    @include setBgColorAndHover($my-red);
+  }
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 8px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 14px;
+  border-style: solid;
+  padding: 6px 11px 6px 11px;
+  text-decoration: none;
+
+  :hover {
+    text-decoration: none;
+  }
+}
