@@ -17,7 +17,10 @@ function fetchAbbreviations() {
     .then(response => response.text())
     .then((text) => {
       const lines = text.split("\n").filter(x => x.length > 0);
-      const pairs = lines.map(line => line.split(" "));
+      const pairs = lines.map((line) => {
+        const split = line.indexOf(" ");
+        return [line.slice(0, split), line.slice(split + 1)];
+      });
       return _.fromPairs(pairs);
     })
     .then((abbr) => {

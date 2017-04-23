@@ -27,11 +27,12 @@ export default function ChoroplethMap(props) {
   };
 
   const featureStyle = (feature) => {
+    const name = feature.properties.woe_name;
     return {
       color: "grey",
       weight: 1.5,
       opacity: 1,
-      fillColor: getColor(props.values, feature.properties.name)
+      fillColor: getColor(props.values, name)
     };
   };
 
