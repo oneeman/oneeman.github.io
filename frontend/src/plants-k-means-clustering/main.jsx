@@ -15,7 +15,7 @@ loadData().then((theData) => {
     mean: data.mean
   };
   ReactDOM.render(
-    React.createElement(PanelWithControls, {data: originalData, k: 4}),
+    React.createElement(PanelWithControls, {data: originalData, k: 6}),
     document.getElementById("map-test")
   );
 });

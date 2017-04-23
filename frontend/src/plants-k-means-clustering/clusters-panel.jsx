@@ -7,9 +7,13 @@ import { step, initializeCenters } from './k-means.js';
 export function ClustersPanel({data, centers}) {
   const maps = centers.map((center, i) => {
     const values = _.zipObject(data.names, center);
-    return <ChoroplethMap geoJSON={data.geoJSON} values={values} mean={data.mean} key={i} />;
+    return (<div className="col-lg-4 choropleth-container">
+      <div className="choropleth-inner-container">
+        <ChoroplethMap geoJSON={data.geoJSON} values={values} mean={data.mean} key={i} />
+      </div>
+    </div>);
   });
-  return <div>{maps}</div>;
+  return <div className="row">{maps}</div>;
 }
 
 ClustersPanel.propTypes = {

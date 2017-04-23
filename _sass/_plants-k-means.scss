@@ -1,16 +1,22 @@
-.leaflet-container {
-  background-color: white;
-  width: 100%;
-  height: 100%;
+.plants-k-means-clustering {
+  .leaflet-container {
+    background-color: white;
+    width: 338px;
+    height: 172px;
+    border: 1px solid;
 
-  svg {
-    width: 100%;
-    height: 100%;
-    transform: translate3d(0px, 0px, 0px) !important;
+    svg {
+      width: 100%;
+      height: 100%;
+      transform: translate3d(0px, 0px, 0px) !important;
+    }
   }
 
-  .leaflet-zoom-animated {
-  width: 100%;
-  height: 100%;
+  .choropleth-container {
+    margin-bottom: 10px;
+    .choropleth-inner-container {
+      margin-right: 5px;
+      margin-left: 5px;
+    }
   }
 }

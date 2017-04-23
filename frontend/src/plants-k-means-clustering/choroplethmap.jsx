@@ -11,10 +11,8 @@ proj4.defs("miller", "+proj=mill +lat_0=0 +lon_0=0 +x_0=0 +y_0=0 +R_A +ellps=WGS
 
 export default function ChoroplethMap(props) {
   const palette = chroma.scale(['red', 'white', 'green']).domain([0, props.mean, 1]);
-  const center = {x: -0.001, y: 0.0005};
-  const width = 340;
-  const aspectRatio = 1.92;
-  const parentProps = {style: {height: width / aspectRatio, width}};
+  const center = {x: -0.001002, y: 0.00049};
+  const parentProps = {style: {height: 172, width: 338}};
   const mapProps = {
     zoom: 19,
     center: [center.y, center.x],
@@ -40,7 +38,7 @@ export default function ChoroplethMap(props) {
     };
   };
 
-  return (<div {...parentProps}>
+  return (<div className="plants-choropleth-map" {...parentProps}>
     <Map id={props.id} {...mapProps}>
       <Proj4GeoJSON style={featureStyle} data={props.geoJSON} />
     </Map>
