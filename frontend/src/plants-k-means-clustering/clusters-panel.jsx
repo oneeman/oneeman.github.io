@@ -13,5 +13,5 @@ export default function ClustersPanel({data, centers}) {
 
 ClustersPanel.propTypes = {
   data: PropTypes.object.isRequired,
-  centers: PropTypes.arrayOf(PropTypes.number).isRequired
+  centers: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number)).isRequired
 };

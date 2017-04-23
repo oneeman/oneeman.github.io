@@ -15,7 +15,9 @@ module.exports = {
     "no-use-before-define": "off",
     "arrow-body-style": "off",
     "max-len": ["warn", {code: 120}],
-    "react/forbid-prop-types": "off"
+    "react/forbid-prop-types": "off",
+    "no-plusplus": "off",
+    "import/extensions": "off"
   },
   "globals": {
     "document": true,

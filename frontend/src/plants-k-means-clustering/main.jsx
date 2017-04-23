@@ -1,9 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import loadData from './dataset';
-import ChoroplethMap from './choroplethmap.jsx';
 import ClustersPanel from './clusters-panel.jsx';
-import { initializeCenters, classify, updateCenters } from './k-means.js';
+import { initializeCenters, step } from './k-means.js';
 
 let data;
 
@@ -16,6 +15,12 @@ loadData().then((theData) => {
     names: data.namesOriginal
   };
   const n = originalData.data[0].length;
-  const centers = initializeCenters(n, 4);
-  ReactDOM.render(React.createElement(ClustersPanel, {data: originalData, centers}), document.getElementById("map-test"));
+  let centers = initializeCenters(n, 4);
+  for (let i = 0; i < 2; i++) {
+    centers = step(originalData.data, centers);
+  }
+  ReactDOM.render(
+    React.createElement(ClustersPanel, {data: originalData, centers}),
+    document.getElementById("map-test")
+  );
 });
