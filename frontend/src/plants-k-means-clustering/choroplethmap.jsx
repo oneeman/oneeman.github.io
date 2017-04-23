@@ -56,6 +56,12 @@ function getColor(values, name) {
   if (name == null) {
     return null;
   }
-  const val = values[name];
+  let val;
+  if (name === "Newfoundland and Labrador") {
+    // Average the two, since on the map they're lumped together
+    val = (values.Newfoundland + values.Labrador) / 2;
+  } else {
+    val = values[name];
+  }
   return palette(val);
 }
