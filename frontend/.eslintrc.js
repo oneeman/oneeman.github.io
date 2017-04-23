@@ -17,7 +17,8 @@ module.exports = {
     "max-len": ["warn", {code: 120}],
     "react/forbid-prop-types": "off",
     "no-plusplus": "off",
-    "import/extensions": "off"
+    "import/extensions": "off",
+    "react/sort-comp": "off"
   },
   "globals": {
     "document": true,

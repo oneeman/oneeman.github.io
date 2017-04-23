@@ -26,16 +26,20 @@ export class PanelWithControls extends React.Component {
     super(props);
     this.data = props.data;
     this.n = props.data.data[0].length;
-    this.state = {
-      i: 0,
-      centers: initializeCenters(this.n, props.k),
-      running: false,
-    };
+    this.state = this.getInitialState();
     setInterval(() => {
       if (this.state.running) {
         this.step();
       }
     }, 2000);
+  }
+
+  getInitialState() {
+    return {
+      i: 0,
+      centers: initializeCenters(this.n, this.props.k),
+      running: false,
+    };
   }
 
   step() {
@@ -49,12 +53,21 @@ export class PanelWithControls extends React.Component {
     this.setState(newState);
   }
 
+  reset() {
+    this.setState(this.getInitialState());
+  }
+
   render() {
     return (
       <div>
         <button className="primary" onClick={() => { this.step(); }}>Step</button>
-        <button className="primary" onClick={() => { this.startStop(); }}>{ this.state.running ? "Stop" : "Start" }</button>
-        <ClustersPanel data={this.data} centers={this.state.centers} />
+        <button className="primary" onClick={() => { this.startStop(); }}>
+          { this.state.running ? "Stop" : "Start" }
+        </button>
+        <button className="default" onClick={() => { this.reset(); }}>
+          Reset
+        </button>
+ <ClustersPanel data={this.data} centers={this.state.centers} />
       </div>
     );
   }
