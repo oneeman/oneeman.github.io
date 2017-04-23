@@ -36,7 +36,7 @@ export default function ChoroplethMap(props) {
   };
 
   return (<div {...parentProps}>
-    <Map {...mapProps}>
+    <Map id={props.id} {...mapProps}>
       <GeoJSON style={featureStyle} data={props.geoJSON} />
     </Map>
   </div>);
@@ -55,6 +55,6 @@ function getColor(values, name) {
   if (name == null) {
     return null;
   }
-  const val = Math.min(name.length / 20, 1);
+  const val = values[name];
   return palette(val);
 }

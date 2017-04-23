@@ -26,6 +26,8 @@ function fetchAbbreviations() {
       data.abbrFixed = _.clone(abbr);
       data.abbrFixed.ab = abbr.al;
       data.abbrFixed.al = abbr.ab;
+      data.namesOriginal = getStateNames(data.abbrOriginal);
+      data.namesFixed = getStateNames(data.abbrFixed);
     });
 }
 
@@ -51,4 +53,10 @@ function encodeDataset(datasetLines, abbr) {
   return datasetLines.map((line) => {
     return states.map(state => (line.includes(state) ? 1 : 0));
   });
+}
+
+function getStateNames(abbr) {
+  const pairs = _.toPairs(abbr);
+  pairs.sort();
+  return pairs.map(p => p[1]);
 }
