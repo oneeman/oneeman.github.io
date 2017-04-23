@@ -14,7 +14,8 @@ module.exports = {
     "radix": "off",
     "no-use-before-define": "off",
     "arrow-body-style": "off",
-    "max-len": ["warn", {code: 120}]
+    "max-len": ["warn", {code: 120}],
+    "react/forbid-prop-types": "off"
   },
   "globals": {
     "document": true,
