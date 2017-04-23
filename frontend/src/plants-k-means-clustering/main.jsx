@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import loadData from './dataset';
-import ClustersPanel from './clusters-panel.jsx';
+import { ClustersPanel, PanelWithControls } from './clusters-panel.jsx';
 import { initializeCenters, step } from './k-means.js';
 
 let data;
@@ -12,15 +12,11 @@ loadData().then((theData) => {
     geoJSON: data.mapGeoJSON,
     data: data.original,
     abbr: data.abbrOriginal,
-    names: data.namesOriginal
+    names: data.namesOriginal,
+    mean: data.mean
   };
-  const n = originalData.data[0].length;
-  let centers = initializeCenters(n, 4);
-  for (let i = 0; i < 2; i++) {
-    centers = step(originalData.data, centers);
-  }
   ReactDOM.render(
-    React.createElement(ClustersPanel, {data: originalData, centers}),
+    React.createElement(PanelWithControls, {data: originalData, k: 4}),
     document.getElementById("map-test")
   );
 });

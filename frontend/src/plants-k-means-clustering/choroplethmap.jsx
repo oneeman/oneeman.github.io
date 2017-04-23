@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import { Map, GeoJSON } from 'react-leaflet';
 import chroma from 'chroma-js';
 
-const palette = chroma.scale('RdBu').padding(-0.2);
 
 export default function ChoroplethMap(props) {
+  const palette = chroma.scale(['red', 'white', 'green']).domain([0, props.mean, 1]);
   const limits = {lat: [26, 68], long: [-170, -52]};
   const width = 500;
   const aspectRatio = 1.82;
@@ -32,7 +32,7 @@ export default function ChoroplethMap(props) {
       color: "grey",
       weight: 1.5,
       opacity: 1,
-      fillColor: getColor(props.values, name)
+      fillColor: getColor(props.values, name, palette)
     };
   };
 
@@ -45,14 +45,16 @@ export default function ChoroplethMap(props) {
 
 ChoroplethMap.propTypes = {
   geoJSON: PropTypes.object.isRequired,
+  mean: PropTypes.number.isRequired,
   values: PropTypes.objectOf(PropTypes.number)
 };
 
 ChoroplethMap.defaultProps = {
-  values: {}
+  values: {},
+  mean: 0.5
 };
 
-function getColor(values, name) {
+function getColor(values, name, palette) {
   if (name == null) {
     return null;
   }
