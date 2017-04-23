@@ -19,4 +19,34 @@
       margin-left: 5px;
     }
   }
+
+  .clusters-panel {
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: 5px;
+  }
+
+  .controls {
+    margin-bottom: 15px;
+  }
+
+  .k-means-status {
+    margin-top: 5px;
+    margin-left: 5px;
+  }
+
+  .k-selection {
+    margin: 30px;
+
+    input[type="range"] {
+      margin-right: 15px;
+      float: left;
+    }
+
+    .k-candidate-number {
+      width: 40px;
+      float: left;
+    }
+  }
+
 }

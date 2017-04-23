@@ -19,7 +19,10 @@ module.exports = {
     "no-plusplus": "off",
     "import/extensions": "off",
     "react/sort-comp": "off",
-    "no-param-reassign": "off"
+    "no-param-reassign": "off",
+    "react/jsx-indent-props": "off",
+    "react/jsx-first-prop-new-line": "off",
+    "react/jsx-closing-bracket-location": "off"
   },
   "globals": {
     "document": true,

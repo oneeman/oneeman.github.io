@@ -122,7 +122,7 @@ a {
  */
 blockquote {
     color: $grey-color;
-    border-left: 4px solid $grey-color-light;
+    border-left: 4px solid $grey-color-medium-light;
     padding-left: $spacing-unit / 2;
     font-size: 18px;
     letter-spacing: -1px;
@@ -141,7 +141,7 @@ blockquote {
 pre,
 code {
     font-size: 15px;
-    border: 1px solid $grey-color-light;
+    border: 1px solid $grey-color-medium-light;
     border-radius: 3px;
     background-color: #27282;
 }
@@ -230,19 +230,28 @@ body .wrapper {
   background-image: -ms-linear-gradient(top, $baseColor, darken($baseColor, 5%));
   background-image: -o-linear-gradient(top, $baseColor, darken($baseColor, 5%));
   background-image: linear-gradient(top, $baseColor, darken($baseColor, 5%));
-  &:hover {
+  &:hover:enabled {
     background-color: darken($baseColor, 5%);
     background-image: -webkit-linear-gradient(top, lighten($baseColor, 10%), lighten($baseColor, 5%));
     background-image: -moz-linear-gradient(top, lighten($baseColor, 10%), lighten($baseColor, 5%));
     background-image: -ms-linear-gradient(top, lighten($baseColor, 10%), lighten($baseColor, 5%));
     background-image: -o-linear-gradient(top, lighten($baseColor, 10%), lighten($baseColor, 5%));
     background-image: linear-gradient(top, lighten($baseColor, 10%), lighten($baseColor, 5%));
+    cursor: pointer;
+  }
+  &:disabled {
+    background-color: $grey-color-medium-light;
+    background-image: -webkit-linear-gradient(top, $grey-color-medium-light, darken($grey-color-medium-light, 5%));
+    background-image: -moz-linear-gradient(top, $grey-color-medium-light, darken($grey-color-medium-light, 5%));
+    background-image: -ms-linear-gradient(top, $grey-color-medium-light, darken($grey-color-medium-light, 5%));
+    background-image: -o-linear-gradient(top, $grey-color-medium-light, darken($grey-color-medium-light, 5%));
+    background-image: linear-gradient(top, $grey-color-medium-light, darken($grey-color-medium-light, 5%));
   }
 }
 
 button, .button {
   &.default {
-    @include setBgColorAndHover(gray);
+    @include setBgColorAndHover($my-brown);
   }
   &.primary {
     @include setBgColorAndHover($my-blue);
@@ -269,4 +278,5 @@ button, .button {
   :hover {
     text-decoration: none;
   }
+  
 }
