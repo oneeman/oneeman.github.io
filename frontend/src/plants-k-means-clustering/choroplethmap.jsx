@@ -1,19 +1,23 @@
+import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Proj } from 'leaflet';
 import { Map, GeoJSON } from 'react-leaflet';
+import proj4 from 'proj4';
+import 'proj4leaflet';
 import chroma from 'chroma-js';
 
+proj4.defs("miller", "+proj=mill +lat_0=0 +lon_0=0 +x_0=0 +y_0=0 +R_A +ellps=WGS84 +datum=WGS84 +units=m no_defs");
 
 export default function ChoroplethMap(props) {
   const palette = chroma.scale(['red', 'white', 'green']).domain([0, props.mean, 1]);
-  const limits = {lat: [26, 68], long: [-170, -52]};
-  const width = 500;
-  const aspectRatio = 1.82;
+  const center = {x: -0.001, y: 0.0005};
+  const width = 340;
+  const aspectRatio = 1.92;
   const parentProps = {style: {height: width / aspectRatio, width}};
   const mapProps = {
-    maxBounds: [[limits.lat[0], limits.long[0]], [limits.lat[1], limits.long[1]]],
-    zoom: 3,
-    center: [(limits.lat[0] + limits.lat[1]) / 2, (limits.long[0] + limits.long[1]) / 2],
+    zoom: 19,
+    center: [center.y, center.x],
     // Disable all interactivity
     dragging: false,
     touchZoom: false,
@@ -38,7 +42,7 @@ export default function ChoroplethMap(props) {
 
   return (<div {...parentProps}>
     <Map id={props.id} {...mapProps}>
-      <GeoJSON style={featureStyle} data={props.geoJSON} />
+      <Proj4GeoJSON style={featureStyle} data={props.geoJSON} />
     </Map>
   </div>);
 }
@@ -66,4 +70,13 @@ function getColor(values, name, palette) {
     val = values[name];
   }
   return palette(val);
+}
+
+class Proj4GeoJSON extends GeoJSON {
+  createLeafletElement(props) {
+    const options = _.clone(props);
+    const data = props.data;
+    delete options.data;
+    return Proj.geoJson(data, this.getOptions(options));
+  }
 }

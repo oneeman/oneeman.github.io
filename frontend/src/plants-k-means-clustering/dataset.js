@@ -3,11 +3,22 @@ import _ from 'lodash';
 
 const data = {};
 
+function doReproject(mapGeoJSON) {
+  mapGeoJSON.crs = {
+    type: "name",
+    properties: {
+      name: "miller",
+    }
+  };
+  return mapGeoJSON;
+}
+
 export default function loadData() {
   return Promise.all([fetchDataset(), fetchMap(), fetchAbbreviations()]).then(([datasetLines, mapGeoJSON]) => {
     data.original = encodeDataset(datasetLines, data.abbrOriginal);
     data.fixed = encodeDataset(datasetLines, data.abbrFixed);
-    data.mapGeoJSON = mapGeoJSON;
+    data.mapGeoJSON = doReproject(mapGeoJSON);
+    data.mean = _.mean(data.original.map(row => _.mean(row)));
     return data;
   });
 }

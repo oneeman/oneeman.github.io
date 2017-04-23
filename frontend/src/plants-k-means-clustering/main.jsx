@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import loadData from './dataset';
-import { ClustersPanel, PanelWithControls } from './clusters-panel.jsx';
-import { initializeCenters, step } from './k-means.js';
+import { PanelWithControls } from './clusters-panel.jsx';
 
 let data;
 
