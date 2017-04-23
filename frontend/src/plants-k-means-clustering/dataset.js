@@ -57,7 +57,7 @@ function fetchMap() {
 }
 
 function parseDataset(text) {
-  const lines = text.split("\n");
+  const lines = _.filter(text.split("\n"));
   return lines.map(line => line.split(",").slice(1));
 }
 

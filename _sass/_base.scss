@@ -220,6 +220,20 @@ body .wrapper {
 }
 
 /**
+ * Prism overrides for code snippets
+ */
+
+pre[class*="language-"] {
+  code {
+    // Taken from stackoverflow
+    font-family: 'Consolas', 'Menlo', 'Monaco', 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', 'monospace', 'sans-serif' !important;
+  }
+  border-width: 0.2em !important;
+  padding: 0px !important;
+  margin-bottom: 1em !important;
+}
+
+/**
  * Buttons
  */
 

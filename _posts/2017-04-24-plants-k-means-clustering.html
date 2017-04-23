@@ -6,6 +6,44 @@ categories: blog
 ---
 
 <div class="plants-k-means-clustering">
+  <p>
+    For this, the first post on this blog, I will be looking at the results of running the k-means clustering algorithm on the USDA's Plants dataset.
+    As we will see, the algorithm manages to reveal geographical information which is not explicitly represented in the dataset.
+  </p>
+  <p>
+    To begin, let us examine the kind of data we'll be dealing with.
+    The Plants dataset (among many others) is <a href="https://archive.ics.uci.edu/ml/datasets/plants" target="_blank">available for download</a> at UCI's machine learning repository.
+    It contains a listing of 34,781 plant genera and species, and the states (or provinces) in the US and Canada in which each is found.
+    For example, these are the first five lines of the data file:
+  </p>
+
+  <pre><code class="language-">
+    abelia,fl,nc
+    abelia x grandiflora,fl,nc
+    abelmoschus,ct,dc,fl,hi,il,ky,la,md,mi,ms,nc,sc,va,pr,vi
+    abelmoschus esculentus,ct,dc,fl,il,ky,la,md,mi,ms,nc,sc,va,pr,vi
+    abelmoschus moschatus,hi,pr
+  </code></pre>
+
+  <p>
+    Each line contains the plant's name and a list of the states it's found in.
+    The states are identified by abbreviations, and <a href="https://archive.ics.uci.edu/ml/machine-learning-databases/plants/stateabbr.txt" target="_blank">a separate file</a> lists what each abbreviation stands for.
+    There are 69 states overall.
+  </p>
+
+  <p>
+    Before running k-means, we need to do a bit of preprocessing, to convert this into the right form:
+    <ol>
+      <li>Decide on an ordering to use for the states (alphabetical by abbreviation is natural enough)</li>
+      <li>Parse the list of states each plant is present in (and discard the plant's name)</li>
+      <li>Encode each plant as a row of 0s and 1s, 1s for those states it's found in and 0s for the rest</li>
+    </ol>
+
+    This gives us the dataset in the form a matrix with 34,781 rows and 69 columns.
+  </p>
+
+
+  </p>
   <div id="map-test"></div>
 </div>
 <script src="/vendor.js"></script>
