@@ -31,7 +31,7 @@ export class PanelWithControls extends React.Component {
       if (this.state.running) {
         this.step();
       }
-    }, 2000);
+    }, 500);
   }
 
   getInitialState() {

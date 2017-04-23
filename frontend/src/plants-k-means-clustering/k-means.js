@@ -1,25 +1,12 @@
 import _ from 'lodash';
 
 function dist(a, b) {
-  const sqDist =
-    _.chain(_.range(a.length))
-          .map(i => a[i] - b[i])
-          .map(x => x * x)
-          .sum()
-          .value();
-  return Math.sqrt(sqDist);
-}
-
-function argmin(arr) {
-  let best = arr[0];
-  let result = 0;
-  arr.forEach((x, i) => {
-    if (x < best) {
-      best = x;
-      result = i;
-    }
-  });
-  return result;
+  let ssq = 0;
+  for (let i = 0; i < a.length; i++) {
+    const diff = b[i] - a[i];
+    ssq += diff * diff;
+  }
+  return Math.sqrt(ssq);
 }
 
 export function initializeCenters(n, k) {
@@ -28,10 +15,21 @@ export function initializeCenters(n, k) {
 }
 
 export function classify(rows, centers) {
-  return rows.map((row) => {
-    const distances = centers.map(c => dist(row, c));
-    return argmin(distances);
-  });
+  const labels = [];
+  for (let i = 0; i < rows.length; i++) {
+    const x = rows[i];
+    let label = 0;
+    let best = dist(x, centers[0]);
+    for (let k = 1; k < centers.length; k++) {
+      const distance = dist(x, centers[k]);
+      if (distance < best) {
+        label = k;
+        best = distance;
+      }
+    }
+    labels.push(label);
+  }
+  return labels;
 }
 
 export function updateCenters(rows, k, labels) {
