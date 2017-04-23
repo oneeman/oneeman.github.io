@@ -49,7 +49,13 @@ export function updateCenters(rows, k, labels) {
   });
 }
 
-export function step(rows, centers) {
-  const labels = classify(rows, centers);
-  return updateCenters(rows, centers.length, labels);
+export function step(rows, centers, labels) {
+  // If we are given the labels from the last step, we don't need to recalculate them
+  labels = labels || classify(rows, centers);
+  const newCenters = updateCenters(rows, centers.length, labels);
+  const newLabels = classify(rows, newCenters);
+  return {
+    centers: newCenters,
+    labels: newLabels
+  };
 }

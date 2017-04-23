@@ -18,7 +18,8 @@ module.exports = {
     "react/forbid-prop-types": "off",
     "no-plusplus": "off",
     "import/extensions": "off",
-    "react/sort-comp": "off"
+    "react/sort-comp": "off",
+    "no-param-reassign": "off"
   },
   "globals": {
     "document": true,

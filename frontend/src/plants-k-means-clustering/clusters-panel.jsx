@@ -31,20 +31,33 @@ export class PanelWithControls extends React.Component {
       if (this.state.running) {
         this.step();
       }
-    }, 500);
+    }, 100);
   }
 
   getInitialState() {
     return {
       i: 0,
       centers: initializeCenters(this.n, this.props.k),
+      labels: undefined,
       running: false,
+      converged: false
     };
   }
 
   step() {
-    const newCenters = step(this.data.data, this.state.centers);
-    this.setState({i: this.state.i + 1, centers: newCenters});
+    const results = step(this.data.data, this.state.centers, this.state.labels);
+    const newState = _.clone(this.state);
+
+    newState.i += 1;
+    newState.centers = results.centers;
+    newState.labels = results.labels;
+
+    if (_.isEqual(this.state.labels, results.labels)) {
+      newState.converged = true;
+      newState.running = false;
+    }
+
+    this.setState(newState);
   }
 
   startStop() {
@@ -67,7 +80,8 @@ export class PanelWithControls extends React.Component {
         <button className="default" onClick={() => { this.reset(); }}>
           Reset
         </button>
- <ClustersPanel data={this.data} centers={this.state.centers} />
+        <span>Conveged: { this.state.converged ? "YES" : "NO" }</span>
+        <ClustersPanel data={this.data} centers={this.state.centers} />
       </div>
     );
   }
