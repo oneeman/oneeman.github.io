@@ -14,8 +14,22 @@ loadData().then((theData) => {
     names: data.namesOriginal,
     mean: data.mean
   };
+
   ReactDOM.render(
-    React.createElement(PanelWithControls, {data: originalData, k: undefined}),
-    document.getElementById("map-test")
+    React.createElement(PanelWithControls, {data: originalData, k: 6}),
+    document.getElementById("plants-original-cluster-panel")
+  );
+
+  const fixedData = {
+    geoJSON: data.mapGeoJSON,
+    data: data.fixed,
+    abbr: data.abbrFixed,
+    names: data.namesFixed,
+    mean: data.mean
+  };
+
+  ReactDOM.render(
+    React.createElement(PanelWithControls, {data: fixedData, k: 6}),
+    document.getElementById("plants-fixed-cluster-panel")
   );
 });

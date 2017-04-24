@@ -121,7 +121,7 @@ export class PanelWithControls extends React.Component {
           </button>
           <button className="primary"
                   disabled={this.state.running || this.state.converged}
-                  onClick={() => { this.step(); }}>Run a single step
+                  onClick={() => { this.step(); }}>Run a single iteration
           </button>
           <button className="warn" onClick={() => { this.reset(); }}>
             Reset
