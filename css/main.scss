@@ -19,7 +19,8 @@ $my-blue: #1f4e7d;
 $my-purple: #7d1f7d;
 $my-green: #4e7d1f;
 $my-brown: #7d4e1f;
-$my-red: #7d1f1f;
+$my-orange: #ed8e2e;
+$my-red: #ec2222;
 
 $text-color: #000000;
 $background-color: #fdfdfd;
@@ -29,10 +30,11 @@ $link-color:      $my-orange;
 
 $grey-color: #cfcfcf;
 $grey-color-light: lighten($grey-color, 40%);
+$grey-color-medium-light: #bdbdbd;
 $grey-color-dark:  darken($grey-color, 25%);
 
 $h1-color: $my-purple;
-$h2-color: $my-red;
+$h2-color: $my-brown;
 $h3-color: $my-blue;
 
 // Width of the content area
@@ -62,5 +64,6 @@ $on-laptop:        800px;
 @import
         "base",
         "layout",
-        "syntax-highlighting"
+        "syntax-highlighting",
+        "plants-k-means"
 ;
