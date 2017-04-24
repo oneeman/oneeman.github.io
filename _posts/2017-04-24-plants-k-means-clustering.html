@@ -7,7 +7,7 @@ categories: blog
 
 <div class="plants-k-means-clustering">
   <p>
-    For this, the first post on this blog, I will be looking at the results of running the k-means clustering algorithm on the USDA's Plants dataset, and letting you run the algorithm here in your browser (the impatient may now scroll down).
+    For this, my first post on this blog, I will be looking at the results of running the k-means clustering algorithm on the USDA's Plants dataset, and letting you run the algorithm here in your browser (the impatient may now scroll down).
     As we will see, the algorithm manages to reveal geographical information which is not explicitly represented in the dataset.
   </p>
   <p>
@@ -41,7 +41,7 @@ categories: blog
     <ol>
       <li>Decide on an ordering to use for the states (alphabetical by abbreviation is natural enough)</li>
       <li>Parse the list of states each plant is present in (and discard the plant's name)</li>
-      <li>Encode each plant as a row of 0s and 1s, 1s for those states it's found in and 0s for the rest</li>
+      <li>Encode each plant as a row of 0s and 1s, with 1s for those states it's found in and 0s for the rest</li>
     </ol>
 
     This gives us the dataset in the form a matrix with 34,781 rows and 69 columns, and we are now ready to run our algorithm.
@@ -58,14 +58,14 @@ categories: blog
       <li>Each cluster center is recalculated using this new assignment, by taking the average of all the plants assigned to that cluster.</li>
     </ol>
 
-    <a href="https://github.com/oneeman/oneeman.github.io/tree/master/frontend/src/plants-k-means-clustering/k-means.js" target="_blank">The source code</a> is simple enough, though it's not nearly as nice in Javascript as it would be in Python with NumPy (researching which Javascript matrix library offers the nicest API is left as an exercise for the reader).
+    <a href="https://github.com/oneeman/oneeman.github.io/tree/master/frontend/src/plants-k-means-clustering/k-means.js" target="_blank">The source code</a> is simple enough, though it's not nearly as nice in Javascript as it would be in Python with NumPy (researching which Javascript matrix library offers the nicest API and the best performance is left as an exercise for the reader).
   </p>
 
   <h2>Visualizing the clusters</h2>
 
   <p>
     The output from running k-means is the classification of the plants into clusters, together with the centers of the clusters.
-    The typical ways to visualize the classification is using a scatter plot, where each point represents a plant and its color or marker symbol indicates which cluster it belongs to.
+    One common way to visualize a classification is using a scatter plot, where each point represents a plant and its color indicates which cluster it belongs to.
     Since each point lies in 69-dimensional space, in order to plot the points, we need to project them onto two dimensions, for example with <a href="https://en.wikipedia.org/wiki/Multidimensional_scaling" target="_blank">multidimensional scaling</a>.
     This will give us a plot such as this one, using six clusters:
   </p>
@@ -73,12 +73,12 @@ categories: blog
   <div class="plants-scatter-plot"><img src="/assets/plants-k-means-clustering/scatter_plot.png"/></div>
 
   <p>
-    We can see that this does generally look like a clustering, and it suggests that this dataset does not consists of six well-separated clusters, since it looks more like a circle cut into 6 slices than completely separate groups of points.
+    We can see that this does generally look like a clustering.  But the plot suggests that this dataset does not consists of six well-separated clusters, since it looks more like a circle cut into 6 slices than completely separate groups of points.
     We may also notice the yellow points at the top, far away from the yellow cluster.
     This might suggest that these points were misclassified, since they appear to be closer to the blue cluster than to the yellow one.
     However, this is merely an artifact of using multidimensional scaling.
     After all, with k-means, every point gets assigned to the cluster whose center it's closest to.
-    This means that, in the original 69-dimensional space, these yellow points must actually be closer to the yellow cluster's center than the any other's.
+    This means that, in the original 69-dimensional space, these yellow points must actually be closer to the yellow cluster's center than to any other's.
     Multidimensional scaling attempts to preserve the distances between the points as much as it can, but cannot do it perfectly, and artifacts such as this are to be expected.
   </p>
 
@@ -101,13 +101,13 @@ categories: blog
   <div id="plants-original-cluster-panel"></div>
 
   <p>
-    The average probabilty of a random plant being found in a random state is represented as white, values above as green, and values below that as red.
+    The average probabilty of a random plant being found in a random state is represented as white, values above that as green, and values below that as red.
     You may have noticed that more states start out green than red.
-    This is because I initialize the clusters with uniform random numbers between 0 and 1, but the overall average in the dataset (represented as white) is about 0.13, a good bit lower than 0.5.
+    This is because I initialize the clusters with uniform random numbers between 0 and 1, but the overall average in the dataset (represented as white) is about 0.13, which is a good bit lower than 0.5.
   </p>
 
   <p>
-    Now, if you run the algorith, you can see how the initial random cluster centers are gradually improved until the algorithm convergence.
+    Now, if you run the algorithm, you can see how the initial random cluster centers are gradually improved until the algorithm convergence.
     The maps of the final cluster centers should no longer look like maps colored at random.
     Instead, we should be seeing green regions, and red regions, and white regions in between them,
     because the distributions of plant species tend to vary continuously over such large land masses as the US and Canada,
@@ -116,12 +116,15 @@ categories: blog
 
   <p>
     Of course, the colors on the map don't really vary continuously.
-    Each state is colored with a single color, because our dataset contains plant data by state, not by continuous quantities such as latitude and longitude, nor by more fine-grained discrete entities such as counties.
+    Each state is colored with a single color, because our dataset contains plant data by state, not by continuous quantities such as latitude and longitude, nor by finer-grained discrete entities such as counties.
     However, the differences we see in color between neighboring states should be small.
   </p>
 
   <p>
-    <strong>But, wait, there's something wrong!</strong>  Maybe you already noticed it.
+    <strong>But, wait, there's something wrong!</strong>
+  </p>
+  <p>
+    Probably, you already noticed it.
     If not, have a look again, maybe you'll see it.
     Or maybe you had some bad luck, and the clustering you got doesn't make the problem visible enough.
     Try to reset the maps and run the algorithm again.
@@ -139,10 +142,10 @@ categories: blog
   <p>
     As it turns out, there is a very simple explanation: the <a href="https://archive.ics.uci.edu/ml/machine-learning-databases/plants/stateabbr.txt" target="_blank">abbreviations file</a> that came with the dataset has Alabama and Alberta flipped relative to how they're actually used in the dataset.
     It says "ab" for Alabama and "al" for Alberta.
-    Looking back the the first ten plants I listed above, we see that <em>abies balsamea</em> (the balsam fir) contains "ab", but not "al".
+    To check that it's actually wrong, we can look back the the first ten plants I listed above, where we see that <em>abies balsamea</em> (the balsam fir) contains "ab", but not "al".
     Therefore, if we find out whether balsam fir is present in Alberta or Alabama, we'll know which state "ab" really stands for (in this dataset).
-    To do this, we may consult <a href="https://plants.usda.gov/core/profile?symbol=ABBA" target="_blank">the USDA website's page</a>.
-    We see that it is found in Alberta and not in Alabama, which tells us that "ab" stands for Alberta, and that the abbreviations file got it wrong.
+    To do this, we'll consult <a href="https://plants.usda.gov/core/profile?symbol=ABBA" target="_blank">the USDA website's page</a>.
+    There, we see that it's found in Alberta and not in Alabama, which tells us that "ab" stands for Alberta, and that the abbreviations file did get it wrong.
   </p>
 
   <p>
@@ -161,9 +164,7 @@ categories: blog
     So, for example, a cluster which is mostly green in the West and mostly red in the East is easy enough to interpret.
     But we often also see some clusters in which the entire map is red, or the entire map is green.
     These are clusters whose defining characteristic is the average number of states in which their members are found.
-    For example, a map that's all red corresponds to a cluster whose plants are found in less states than average, and not significantly in any particular group of states more than others.
-    That is, as a whole.
-    Each individual plant in such a cluster would, of course, still be found in some states but not in others.
+    For example, a map that's all red corresponds to a cluster whose plants are found in less states than average, and are not (as a whole) distributed significantly in some regions more than others.
   </p>
 
   <h2>
@@ -172,7 +173,7 @@ categories: blog
 
   <p>
     I initially chose this dataset for clustering because I like plants and because the geographic nature of the dataset allows visualization of the clusters using choropleth maps, unlike most high-dimensional datasets, for which finding good visualizations is a problem.
-    As expected, the k-means algorithm managed to reveal, broadly, the geographic structure of the states:
+    As expected, the k-means algorithm managed to partly reveal the geographic structure of the states:
     even though the dataset contains no explicit information as to which states are close to which other states,
     this information is implicit in the distribution of plants between the states,
     and is present in a more summarized (but still implicit) form in the clusters found by k-means.
@@ -180,7 +181,7 @@ categories: blog
 
   <p>
     It would be an interesting exercise to see how well the relative positions of states (or, rather, 2D values which correlate highly to them) could be recovered from cluster centers, perhaps running clustering many times and recording all the centers we get.
-    We would never expect jaw-dropping results, because differences in floar don't depend directly on latitude and longitude, but on a variety of factors, such as topography, climate, soil, and a million other things.
+    We would never expect jaw-dropping results, because differences in flora don't depend directly on latitude and longitude, but on a variety of factors, such as topography, climate, soil, and a million other things.
     For example we would expect larger differences in the flora if we went from one side of the Rockies to the other than if we covered a similar distance in the great plains.
     Similarly, we would expect some similarity of the spatial relationship between states to be implicit in the cluster centers, and that it should be possible to visualize it by projecting them onto two dimensions, for example using multidimensional scaling.
   </p>
@@ -188,7 +189,7 @@ categories: blog
     Granted, this should also be possible using the original dataset, without clustering.
     We could consider each state to be a row rather a column.
     Then our dataset would consist of 69 vectors in a 34,781-dimensional space, which we could then project onto two dimensions using MDS.
-    However, if the results using and projecting the cluster centers instead were to be found to be close to as good, the clusters would be serving as a sort of summary here, too, since the state would be in a lower dimensional space (one dimension per cluster).
+    However, if the results with the cluster centers instead turned out to be close to as good, the clusters would be serving as a sort of summary here, too, since the state vectors would be in a lower dimensional space (one dimension per cluster).
   </p>
 
   <p>
@@ -201,11 +202,11 @@ categories: blog
     In fact, I would never have discovered the error if I hadn't visualized the cluster centers using choropleth maps,
     because the error only becomes apparent when you see the values for the states placed in their positions on the map.
     If you think about it, the error could even have been discovered without any clustering, by simply drawing choropleth maps for individual plants.
-    Sooner, rather than later, one would come to a plant which, for example, seems to be found in all the states around Alberta but not in Alberta itself, which would seem suspicious and perhaps trigger comparison with the map on the USDA page.
+    Sooner, rather than later, one would come to a plant which, for example, seems to be found in all the states around Alberta but not in Alberta itself, which would be suspicious and might prompt one to do a sanity check by looking for the map on the USDA page.
   </p>
   <p>
     The lesson to be drawn is that we should never underestimate the importance of finding appropriate visualization methods,
-    and just how important it to not rely on cookiecutter advice, but rather to carefully consider and experiment in order to find the most appropriate visualizations for one's data.
+    and the importance of not relying on cookiecutter advice, but rather carefully considering and experimenting in order to find the most appropriate visualizations for our data.
   </p>
 
 
