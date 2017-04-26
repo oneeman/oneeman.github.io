@@ -3,10 +3,7 @@ import ReactDOM from 'react-dom';
 import loadData from './dataset';
 import { PanelWithControls } from './clusters-panel.jsx';
 
-let data;
-
-loadData().then((theData) => {
-  data = theData;
+loadData().then((data) => {
   const originalData = {
     geoJSON: data.mapGeoJSON,
     data: data.original,
