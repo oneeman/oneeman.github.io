@@ -21,6 +21,9 @@ as Ember's [HTMLBars](http://github.com/tildeio/htmlbars) and the
   
 ## Experience
 
+* **Software Engineer** at [Polly](https://polly.ai), May 2017-present.
+Full-stack development in Typescript, targeting multiple platforms (Slack, Microsoft Teams, and web).
+
 * **Software Developer** at [ThriveHive](http://thrivehive.com), June 2015-June 2016.  Front-end development
 on the company's customer-facing single-page application.
 
