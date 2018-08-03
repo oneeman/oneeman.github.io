@@ -7,7 +7,7 @@ permalink: /cv/
 ---
 
 I'm a software developer based in Costa Rica, from where I've been doing remote work.  My professional experience is as
-a full-stack web developer, primarily with Python, Javascript, and Ruby on Rails.  I care deeply about writing
+a full-stack web developer, primarily with Python, Typescript, Javascript, and Ruby on Rails.  I care deeply about writing
 clean and maintainable code, supported by comprehensive automated tests.  I am also a fan of functional programming,
 having learned Clojure, Elixir, Erlang, Scala, and Haskell.
    
@@ -21,8 +21,14 @@ as Ember's [HTMLBars](http://github.com/tildeio/htmlbars) and the
   
 ## Experience
 
-* **Software Engineer** at [Polly](https://polly.ai), May 2017-present.
-Full-stack development in Typescript, targeting multiple platforms (Slack, Microsoft Teams, and web).
+* **Senior Software Engineer** at [Polly](https://polly.ai), May 2017-present.
+Full-stack development in Typescript, targeting multiple platforms on the front-end: Slack, Microsoft Teams, and web.
+Reponsibilities include:
+designing and implementing new functionality;
+managing AWS production systems;
+monitoring metrics and logs to detect, investigate, and fix production issues;
+and carrying out code review.
+
 
 * **Software Developer** at [ThriveHive](http://thrivehive.com), June 2015-June 2016.  Front-end development
 on the company's customer-facing single-page application.
