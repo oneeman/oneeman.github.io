@@ -37,6 +37,9 @@ body {
     .page-link {
         color: $text-color;
         line-height: $base-line-height;
+        &:hover {
+          color: mix($text-color, $link-color, 40%);
+        }
 
         // Gaps between nav items, but not on the first one
         &:not(:first-child) {

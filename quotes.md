@@ -17,17 +17,11 @@ If I wanted a lecture about money, I could've waited till Sunday and stolen from
 
 ## Serious
 
-If you would persuade, you must appeal to interest rather than intellect.    
---- Benjamin Franklin
-
 Never trust the man who tells you all his troubles but keeps from you all his joys.    
 --- Jewish proverb
 
 The innkeeper loves a drunkard, but not for a son-in-law.  
 --- Jewish proverb
-
-The universe is the bride of the soul.  
---- Ralph Waldo Emerson, Experience (in Essays, Second Series)
 
 To profess to have an aim and then neglect the means of its execution is self-delusion of the most dangerous sort.  
 -- John Dewey, Reconstruction in Philosophy
