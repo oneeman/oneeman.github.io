@@ -6,15 +6,11 @@ priority: 1.2
 permalink: /cv/
 ---
 
-I'm a software developer based in Costa Rica, from where I've been doing remote work.  My professional experience is as
+I'm a senior software engineer based in Costa Rica, from where I've been doing remote work.  My professional experience is as
 a full-stack web developer, primarily with Python, Typescript, Javascript, and Ruby on Rails.  I care deeply about writing
 clean and maintainable code, supported by comprehensive automated tests.  I am also a fan of functional programming,
 having learned Clojure, Elixir, Erlang, Scala, and Haskell.
    
-I am currently enrolled in Georgia Tech's
-[Online Master of Science in Computer Science (OMSCS)](http://www.omscs.gatech.edu/)
-program, focusing on machine learning and artificial intelligence.
-
 When it comes to open-source, I like to contribute to established projects, having made contributions to projects such
 as Ember's [HTMLBars](http://github.com/tildeio/htmlbars) and the
 [Elixir compiler and standard libraries](https://github.com/elixir-lang/elixir).
@@ -49,17 +45,17 @@ Redis.
 * **Mathematics Teacher** at the [Blue Valley School](http://www.bluevalley.ed.cr/), July 2011-December 2011.  Taught
 three classes of high school mathematics.
 
-* **Various teaching gigs** at the University of Pittsburgh, Fall 2003-Spring 2011.  Taught and served as a teaching
+* **Various teaching gigs** at the [University of Pittsburgh](https://www.pitt.edu), Fall 2003-Spring 2011.  Taught and served as a teaching
 assistant for several courses in the mathematics and philosophy departments. 
 
 ## Education
 
-* **M.S. in Computer Science (ongoing)**, Georgia Institute of Technology, Jan 2016-present
+* **M.S. in Computer Science**, Machine Learning specialization, [Georgia Tech](https://gatech.edu), December 2018.
 
-* **Ph.D. candidate in Philosophy**, University of Pittsburgh, ABD (withdrew April 2011).
+* **Ph.D. candidate in Philosophy**, [University of Pittsburgh](https://www.pitt.edu), ABD (withdrew April 2011).
 
-* **M.A. in Philosophy**, University of Pittsburgh, December 2009.
+* **M.A. in Philosophy**, [University of Pittsburgh](https://www.pitt.edu), December 2009.
 
-* **M.A. in Mathematics**, University of Pittsburgh, April 2008.
+* **M.A. in Mathematics**, [University of Pittsburgh](https://www.pitt.edu), April 2008.
 
-* **B.S. with Honors in Mathematics**, California Institute of Technology, June 2003.
+* **B.S. with Honors in Mathematics**, [Caltech](https://www.caltech.edu), June 2003.
