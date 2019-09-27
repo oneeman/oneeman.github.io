@@ -17,7 +17,7 @@ as Ember's [HTMLBars](http://github.com/tildeio/htmlbars) and the
   
 ## Experience
 
-* **Senior Software Engineer** at [Polly](https://polly.ai), May 2017-present.
+* **Senior Software Engineer** at [Polly](https://polly.ai), May 2017-September 2019.
 Full-stack development in Typescript, targeting multiple platforms on the front-end: Slack, Microsoft Teams, and web.
 Reponsibilities include:
 designing and implementing new functionality;
