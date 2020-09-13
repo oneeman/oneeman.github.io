@@ -9,13 +9,15 @@ permalink: /cv/
 I'm a senior software engineer based in Costa Rica, from where I've been doing remote work.  My professional experience is as
 a full-stack web developer, primarily with Python, Typescript, Javascript, and Ruby on Rails.  I care deeply about writing
 clean and maintainable code, supported by comprehensive automated tests.  I am also a fan of functional programming,
-having learned Clojure, Elixir, Erlang, Scala, and Haskell.
+having learned Clojure, Elixir, Erlang, Scala, and Haskell. 
    
 When it comes to open-source, I like to contribute to established projects, having made contributions to projects such
 as Ember's [HTMLBars](http://github.com/tildeio/htmlbars) and the
 [Elixir compiler and standard libraries](https://github.com/elixir-lang/elixir).
   
 ## Experience
+
+* **Partner, Engineering** at [cLabs](https://celo.org), August 2020-present.
 
 * **Senior Software Engineer** at [Polly](https://polly.ai), May 2017-September 2019.
 Full-stack development in Typescript, targeting multiple platforms on the front-end: Slack, Microsoft Teams, and web.
