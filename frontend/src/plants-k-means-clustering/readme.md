@@ -1,4 +1,4 @@
-Code for the interactive choropleth map panels at [http://http://emptyseconds.com/blog/2017/04/24/plants-k-means-clustering.html](http://emptyseconds.com/blog/2017/04/24/plants-k-means-clustering.html).
+Code for the interactive choropleth map panels at [http://http://oneeman.github.io/blog/2017/04/24/plants-k-means-clustering.html](http://oneeman.github.io/blog/2017/04/24/plants-k-means-clustering.html).
 
 The entry point is `main.jsx`.
 
