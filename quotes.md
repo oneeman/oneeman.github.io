@@ -84,6 +84,9 @@ own chamber.
 Vanity.--How wonderful it is that a thing so evident as the vanity of the world is so little known, that it is a strange and surprising thing to say that it is foolish to seek greatness?  
 --- Blaise Pascal, Pensees 161
 
+In proportion as our inward life fails, we go more constantly and desperately to the post-office.
+--- Henry David Thoreau, Life Without Principle
+
 Indeed, it may be laid down as a rule of foreign relations that the lower the probability that advice will be taken,
 the more firmly it will be proffered.  
 --- J. K. Galbraith, The New Industrial State
