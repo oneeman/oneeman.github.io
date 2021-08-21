@@ -6,26 +6,15 @@ priority: 1.2
 permalink: /cv/
 ---
 
-I'm a senior software engineer based in Costa Rica, from where I've been doing remote work.  My professional experience is as
-a full-stack web developer, primarily with Python, Typescript, Javascript, and Ruby on Rails.  I care deeply about writing
-clean and maintainable code, supported by comprehensive automated tests.  I am also a fan of functional programming,
-having learned Clojure, Elixir, Erlang, Scala, and Haskell. 
-   
-When it comes to open-source, I like to contribute to established projects, having made contributions to projects such
-as Ember's [HTMLBars](http://github.com/tildeio/htmlbars) and the
-[Elixir compiler and standard libraries](https://github.com/elixir-lang/elixir).
-  
+My professional experience has been as a software engineer doing remote work out of Costa Rica.  Before that, I studied math and philosophy.
+    
 ## Experience
 
-* **Partner, Engineering** at [cLabs](https://celo.org), August 2020-present.
+* **Partner, Engineering** at [cLabs](https://celo.org), August 2020-August 2021.
+General development on the [Celo blockchain client](https://github.com/celo-org/celo-blockchain), a fork of [go-ethereum](https://github.com/ethereum/go-ethereum)
 
 * **Senior Software Engineer** at [Polly](https://polly.ai), May 2017-September 2019.
 Full-stack development in Typescript, targeting multiple platforms on the front-end: Slack, Microsoft Teams, and web.
-Reponsibilities include:
-designing and implementing new functionality;
-managing AWS production systems;
-monitoring metrics and logs to detect, investigate, and fix production issues;
-and carrying out code review.
 
 
 * **Software Developer** at [ThriveHive](http://thrivehive.com), June 2015-June 2016.  Front-end development
@@ -33,8 +22,7 @@ on the company's customer-facing single-page application.
 
 * **Python Engineer** at [Demand Media](http://www.demandmedia.com) (contracting through 
 [BairesDev](http://bairesdev.com)), June 2014-March 2015.  Full-stack development on the datacenter automation
-project.  The back-end was written in Python, using the excellent [Eve](https://github.com/nicolaiarocci/eve) library
-for a JSON REST API backed by MongoDB, while the front-end used AngularJS.
+project.
 
 * **Created the website** for [Escazú Music Academy](http://www.escazumusic.com) (off-hours, June 2014-July 2014).  It's a static
 site using a responsive Bootstrap template, but I used Ruby on Rails so as to reduce duplication and speed up 
