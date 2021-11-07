@@ -7,6 +7,8 @@ permalink: /cv/
 ---
 
 My professional experience has been as a software engineer doing remote work out of Costa Rica.  Before that, I studied math and philosophy.
+
+I'm currently studying cryptography and zero-knowledge proofs, with an eye to privacy-enabling applications.  Feel free to reach out to me if you're also interested in these things.
     
 ## Experience
 
