@@ -16,6 +16,7 @@ $spacing-unit:     30px;
 // Scheme colors
 $my-orange: #cd8135;
 $my-blue: #1f4e7d;
+$link-blue: #1a6969;
 $my-purple: #7d1f7d;
 $my-green: #4e7d1f;
 $my-brown: #7d4e1f;
@@ -26,7 +27,7 @@ $text-color: #000000;
 $background-color: #fdfdfd;
 $brand-color:      $my-brown;
 $site-title-color: #a66829;
-$link-color:      $my-orange;
+$link-color:      $link-blue;
 
 $grey-color: #cfcfcf;
 $grey-color-light: lighten($grey-color, 40%);
