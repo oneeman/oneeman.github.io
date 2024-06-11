@@ -38,9 +38,6 @@ before the joy is done, sorrow has come to take its place. When joy and sorrow c
 when they go I cannot keep them from going. How sad it is!    
 --- Chuang Tzu, chapter 22
 
-This submarine has come up from the bottom of the ocean to kill us all, she thought, but there’s nothing strange about that, it could happen anytime. It has nothing to do with the war; it could happen to anyone anywhere. Everybody thinks it’s happening because of the war. But that’s not true. The war is just one of the things that could happen.
---- Haruki Murakami, The Wind-Up Bird Chronicle
-
 Never trust the man who tells you all his troubles but keeps from you all his joys.    
 --- Jewish proverb
 
