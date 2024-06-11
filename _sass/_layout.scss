@@ -31,6 +31,7 @@ body {
 
 .site-nav {
     float: right;
+    background-color: rgba(251, 251, 239, 0.0);
     line-height: 56px;
 
     .menu-icon {
@@ -54,7 +55,7 @@ body {
         position: absolute;
         top: 9px;
         right: 30px;
-        background-color: $background-color;
+        background-color: #b3b5b1;
         border: 1px solid $grey-color-light;
         border-radius: 5px;
         text-align: right;

@@ -168,7 +168,6 @@ pre {
  */
 body .wrapper {
     border-top: 5px solid $grey-color-dark;
-    background-color: rgb(251, 251, 239);
     background-color: rgba(251, 251, 239, 0.6);
     max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
     max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
