@@ -2,6 +2,7 @@
 layout: page
 title: Fitness Archive
 priority: 9.1
+nav: false
 excerpt: A bunch of quotes I've collected over the years
 permalink: /fitness-archive/
 ---
