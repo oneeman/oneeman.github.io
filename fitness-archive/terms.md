@@ -3,6 +3,7 @@ layout: page
 title: Fitness Archive Terms of Service
 priority: 9.1
 nav: false
+noindex: true
 permalink: /fitness-archive/terms.html
 ---
 

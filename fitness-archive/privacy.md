@@ -3,6 +3,7 @@ layout: page
 title: Fitness Archive Privacy Policy
 priority: 9.1
 nav: false
+noindex: true
 permalink: /fitness-archive/privacy.html
 ---
 
